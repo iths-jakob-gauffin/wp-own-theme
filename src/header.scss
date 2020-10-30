@@ -1,0 +1,108 @@
+@import "./variables.scss";
+
+.Header{
+    height: 11.4rem;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10rem;
+    color: $orange;
+    position: relative;
+    overflow: hidden;
+
+    &__Title{
+        color: inherit;
+    }
+
+    &__NavList{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        align-self: center;
+        align-items: center;
+        // border: 1px solid black;
+        width: 48.8rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+    }
+
+    &__ListItem{
+        // height: 100%;
+        // display: flex;
+        // align-items: center;
+        // border: 1px solid red;
+    }
+    
+    &__Link{
+        align-self: center;
+        font-weight: bold;
+        color: inherit;
+        font-size: 1.5rem;
+        padding: .5rem;
+        position: relative;
+        // height: 100%;
+
+        &::after{
+            content: "";
+            height: .2rem;
+            width: 3rem;
+            background: $orange;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            // transform: translateX(-50%);
+            // transform: translateY(5rem);
+            transform: translate(-50%, 5rem);
+            opacity: 0;
+            transition: all .3s ease-in-out;
+            
+            // .Header__Link:hover &{
+            //     transform: translateY(5rem);
+            //     // transform: translate(-50%, 0rem);
+            //     // opacity: 1;
+            //     // bottom: -2rem;
+            // }
+            // margin: 0 auto;
+        }
+        
+        &:hover{
+            &::after{
+                    transform: translate(-50%, 0rem);
+                    opacity: 1;
+            }
+        }
+    }
+
+    &__ButtonRoundWrapper{
+        // border: 1px solid black;
+    }
+}
+
+.ButtonRound{
+    width: 16rem;
+    height: 5.6rem;
+    text-align: center;
+    background-image: linear-gradient(to right, $orange, $yellow);
+    border-radius: 10rem;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.2);
+    transform: translateY(0);
+    transition: all .3s ease-in-out;
+    
+    &:hover{
+        box-shadow: 0px 6px 10px rgba(0,0,0,0.18);
+        transform: translateY(-4px);
+    }
+
+    :not(:last-child){
+        margin-right: .8rem;
+    }
+
+
+}
