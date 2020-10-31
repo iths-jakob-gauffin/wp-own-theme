@@ -2,7 +2,8 @@
 
     function eget_tema_files(){
         wp_enqueue_style("google_fonts_roboto", "//fonts.googleapis.com/css2?family=Roboto&display=swap");
-        wp_enqueue_style("eget_tema_main_styles", get_stylesheet_uri());
+        //den här null och microtime gör så att stylesheeten inte cachas. Så slipper du köra disable cache i browsern.
+        wp_enqueue_style("eget_tema_main_styles", get_stylesheet_uri(), NULL, microtime());
     }
 
     add_action("wp_enqueue_scripts", "eget_tema_files");
@@ -19,4 +20,10 @@
     }
     add_action("wp_enqueue_scripts", "scripts");
 
-?>
+    function ownThemeFeatures() {
+        add_theme_support( 'title_tag');
+    }
+
+    //Denna uppdaterar titel-taggen för varje sida du är på. Kan vara bra, v nr 13 
+    add_action('after_setup_theme', 'ownThemeFeatures');
+
