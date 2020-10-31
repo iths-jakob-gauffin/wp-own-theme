@@ -1,0 +1,14 @@
+@import "./variables.scss";
+
+.Footer{
+
+  &__Content{
+    height: 27.3rem;
+    background: $grayDark;
+  }
+
+  &__Bottom{
+    background: $black;
+    height: 3.9rem;
+  }
+}
