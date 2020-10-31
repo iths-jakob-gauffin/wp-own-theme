@@ -1,0 +1,56 @@
+@import "./variables.scss";
+
+.Page{
+
+  background: $white;
+  // background-image: url("./../images/guychickdog.webp");
+  // margin: 0 auto;
+  // padding: 10rem 30rem;
+
+  &__BackgroundImage{
+    padding-top: 51.7rem;
+    position: relative;
+    // z-index: 0;
+    
+    // &::before{
+    //   content: "";
+    //   background: linear-gradient(to right, white, transparent);
+    //   z-index: 5;
+      
+    // }
+  }
+
+  &__BackgroundOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(to right, $white, transparent);
+    background-image: radial-gradient(circle at left, $white, $white, rgba(255,255,255, 0.7 ), transparent);
+  }
+
+  &__Wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10rem 30rem;
+  }
+
+  &__Title, h3{
+    color: $orange;
+  }
+
+  p{
+    color: $gray;
+  }
+
+
+
+
+  // &__Wrapper{
+
+  //   padding: 10rem 20rem;
+
+  // }
+}

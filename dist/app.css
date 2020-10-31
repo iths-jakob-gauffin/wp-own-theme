@@ -16,23 +16,28 @@ html {
 }
 
 .container {
+  margin: 0 auto;
   padding: 0 20rem;
 }
 
 .Header {
   height: 11.4rem;
-  background-color: #FFF7DF;
+  background-color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10rem;
   color: #FF8A00;
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
+  padding: 0 20rem;
+  box-shadow: 0 12px 35px rgba(160, 121, 0, 0.2);
+  position: relative;
+  z-index: 100;
 }
 
-.Header__Title {
-  color: inherit;
+.Header__Title a {
+  color: #FF8A00;
 }
 
 .Header__NavList {
@@ -99,13 +104,75 @@ html {
   margin-right: 0.8rem;
 }
 
-body {
-  background-color: steelblue;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: white;
 }
 
-body h1,
-body h2 {
-  color: #FFF7DF;
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 4.4rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+.Page {
+  background: #FFFFFF;
+}
+
+.Page__BackgroundImage {
+  padding-top: 51.7rem;
+  position: relative;
+}
+
+.Page__BackgroundOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(to right, #FFFFFF, transparent);
+  background-image: radial-gradient(circle at left, #FFFFFF, #FFFFFF, rgba(255, 255, 255, 0.7), transparent);
+}
+
+.Page__Wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10rem 30rem;
+}
+
+.Page__Title,
+.Page h3 {
+  color: #FF8A00;
+}
+
+.Page p {
+  color: #5C5C5C;
+}
+
+.Footer__Content {
+  height: 27.3rem;
+  background: #212121;
+}
+
+.Footer__Bottom {
+  background: #000000;
+  height: 3.9rem;
+}
+
+body {
+  background-color: steelblue;
 }
 
 .FrontPage__StartBackground {

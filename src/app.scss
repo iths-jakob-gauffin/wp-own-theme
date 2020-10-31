@@ -1,13 +1,16 @@
 @import "./base.scss";
 @import "./variables.scss";
 @import "./header.scss";
+@import "./typography.scss";
+@import "./page.scss";
+@import "./footer.scss";
 
 body{
     background-color: steelblue;
 
-    h1, h2{
-        color: $white;
-    }
+    // h1, h2{
+    //     color: $white;
+    // }
 
 }
 
