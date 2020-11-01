@@ -30,3 +30,27 @@ Stack trace:
 [01-Nov-2020 10:43:11 UTC] PHP Parse error:  syntax error, unexpected ';' in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\header.php on line 24
 [01-Nov-2020 10:45:36 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\header.php on line 24
 [01-Nov-2020 10:48:44 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\header.php on line 25
+[01-Nov-2020 11:29:11 UTC] PHP Parse error:  syntax error, unexpected 'get_footer' (T_STRING), expecting ',' or ';' in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\index.php on line 7
+[01-Nov-2020 11:29:17 UTC] PHP Warning:  Use of undefined constant sikdnas - assumed 'sikdnas' (this will throw an Error in a future version of PHP) in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\index.php on line 5
+[01-Nov-2020 11:29:17 UTC] PHP Stack trace:
+[01-Nov-2020 11:29:17 UTC] PHP   1. {main}() C:\Users\jakob\Local Sites\egettheme\app\public\index.php:0
+[01-Nov-2020 11:29:17 UTC] PHP   2. require() C:\Users\jakob\Local Sites\egettheme\app\public\index.php:17
+[01-Nov-2020 11:29:17 UTC] PHP   3. require_once() C:\Users\jakob\Local Sites\egettheme\app\public\wp-blog-header.php:19
+[01-Nov-2020 11:29:17 UTC] PHP   4. include() C:\Users\jakob\Local Sites\egettheme\app\public\wp-includes\template-loader.php:106
+[01-Nov-2020 11:30:04 UTC] PHP Warning:  Use of undefined constant sikdnas - assumed 'sikdnas' (this will throw an Error in a future version of PHP) in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\index.php on line 5
+[01-Nov-2020 11:30:04 UTC] PHP Stack trace:
+[01-Nov-2020 11:30:04 UTC] PHP   1. {main}() C:\Users\jakob\Local Sites\egettheme\app\public\index.php:0
+[01-Nov-2020 11:30:04 UTC] PHP   2. require() C:\Users\jakob\Local Sites\egettheme\app\public\index.php:17
+[01-Nov-2020 11:30:04 UTC] PHP   3. require_once() C:\Users\jakob\Local Sites\egettheme\app\public\wp-blog-header.php:19
+[01-Nov-2020 11:30:04 UTC] PHP   4. include() C:\Users\jakob\Local Sites\egettheme\app\public\wp-includes\template-loader.php:106
+[01-Nov-2020 16:58:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function the_category_list() in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\index.php:55
+Stack trace:
+#0 C:\Users\jakob\Local Sites\egettheme\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\jakob\Local Sites\egettheme\app\public\wp-blog-header.php(19): require_once('C:\\Users\\jakob\\...')
+#2 C:\Users\jakob\Local Sites\egettheme\app\public\index.php(17): require('C:\\Users\\jakob\\...')
+#3 {main}
+  thrown in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\index.php on line 55
+[01-Nov-2020 17:47:05 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\single.php on line 23
+[01-Nov-2020 22:04:54 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\archive.php on line 13
+[01-Nov-2020 22:05:06 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\archive.php on line 13
+[01-Nov-2020 22:05:19 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\archive.php on line 16

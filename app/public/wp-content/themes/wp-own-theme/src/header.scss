@@ -115,7 +115,7 @@
     // }
 
     &__ButtonRoundWrapper{
-        // border: 1px solid black;
+        display: flex;
     }
 }
 
@@ -127,27 +127,3 @@
 //     }
 // }
 
-.ButtonRound{
-    width: 16rem;
-    height: 5.6rem;
-    text-align: center;
-    background-image: linear-gradient(to right, $orange, $yellow);
-    border-radius: 10rem;
-    color: #FFFFFF;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0px 4px 4px rgba(0,0,0,0.2);
-    transform: translateY(0);
-    transition: all .3s ease-in-out;
-    
-    &:hover{
-        box-shadow: 0px 6px 10px rgba(0,0,0,0.18);
-        transform: translateY(-4px);
-    }
-
-    :not(:last-child){
-        margin-right: .8rem;
-    }
-
-
-}

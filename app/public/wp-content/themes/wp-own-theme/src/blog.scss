@@ -1,0 +1,240 @@
+@import "./variables.scss";
+
+.Blog{
+
+  background: $white;
+  // background-image: url("./../images/guychickdog.webp");
+  // margin: 0 auto;
+  // padding: 10rem 30rem;
+
+  &__Main{
+    // width: 100%;
+    // height: 100%;
+    // overflow: scroll;
+  }
+
+  &__BackgroundImage{
+    padding-top: 51.7rem;
+    position: relative;
+    // z-index: 0;
+    
+    // &::before{
+    //   content: "";
+    //   background: linear-gradient(to right, white, transparent);
+    //   z-index: 5;
+      
+    // }
+  }
+
+  &__BackgroundOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(to right, $white, transparent);
+    background-image: radial-gradient(circle at left, $white, $white, rgba(255,255,255, 0.7 ), transparent);
+  }
+
+  &__Wrapper{
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    padding: 10rem 30rem;
+    // display: flex;
+    // justify-content: space-between;
+    width: 100%;
+  }
+
+  &__Title {
+    color: $orange;
+  }
+  
+  &__RichText{
+    
+    h3{
+      color: $orange;
+    }
+    p {
+      color: $gray;
+    }
+  }
+
+  &__Breadcrumb{
+    // background-color: black;
+  }
+  
+  &__BreadcrumbLink, &__BreadcrumbHomeLink{
+    font-size: 1.5rem;
+    padding: .5rem 1.5rem;
+    display: inline-block;  
+  }
+
+  &__BreadcrumbHomeLink{
+    // background: linear-gradient(to right, $orange, $yellow);
+    background: $grayDark;
+  }
+  
+  &__BreadcrumbLink{
+    // background: linear-gradient(to right, $yellow, transparent);
+    color: $grayDark;
+    position: relative;
+    margin-left: .3rem;
+
+    &::before{
+      content: ">";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+    }
+  }
+
+  &__ChildrenAside{
+
+    *{
+      color: $grayDark;
+    }
+  }
+
+  &__ParentTitle{
+    background-color: $orange;
+  }
+  
+  &__ChildrenNavList{
+    list-style: none;
+    background-color: $cream;
+  }
+
+
+
+  // &__Wrapper{
+
+  //   padding: 10rem 20rem;
+
+  // }
+  &__BlogPostsWrapper{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__BlogPostWrapper{
+    padding: 6rem 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .page-numbers{
+    // padding: 3rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 5rem;
+    background: $white;
+    border-radius: 50%;
+    color: $black;
+    margin-right: 1rem;
+    // border: 1px solid $black;
+    font-size: 1.2rem;
+    box-shadow: 0 0 4px rgba(0,0,0, .5);
+
+  }
+  .page-numbers.current{
+    background: radial-gradient($yellow, $orange);
+    color: $white;
+  }
+  .page-numbers.next,
+  .page-numbers.prev{
+    width: 8rem;
+    border-radius: 2rem;
+  }
+
+}
+
+
+
+.BlogPost{
+    width: 76.7rem;
+    height: 78.3rem;
+    // border: 1px solid red;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
+
+    &__Figure{
+      width: 100%;
+      // padding-top: 42.5rem;
+      // padding-top: 55%;
+      // height: 55%;
+      height: calc(425 / 783 * 100%);
+      background-color: $cream;
+    }
+
+    &__Section{
+      // background: linear-gradient(to right top, $yellow, $orange );
+      background: linear-gradient(to right top, $blue, $lightBlue );
+      // background: url('../images/blogWave.svg');
+      // background: url('images/blogWave.svg') center no-repeat, linear-gradient(to right, $orange, $yellow);
+      // border: 1px solid black;
+      // height: 50rem;
+      height: calc(358 / 783 * 100%);
+      position: relative;
+      // height: 45%;
+      z-index: 0;
+      // border-left-bottom-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      overflow: hidden;
+
+      &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('images/blogWave3.svg');
+        fill: green;
+
+        background-size: 100%;
+        background-position: bottom;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &__Content{
+      position: relative;
+      z-index: 2;
+      padding: 5rem 8rem;
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      // border: 1px solid red;
+      height: 100%;
+    }
+    
+    &__Title{
+      color: $white;
+      font-size: 3.2rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    &__MetaBox{
+      margin-bottom: 2.5rem;
+      font-size: 1.5rem;
+    }
+    
+    &__Preamble {
+      color: $white;
+      line-height: 1.6;
+      letter-spacing: .2px;
+
+      + p{
+        hyphens: auto;
+      }
+    }
+}
+

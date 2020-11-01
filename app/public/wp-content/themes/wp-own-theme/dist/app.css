@@ -35,13 +35,10 @@ html {
   position: relative;
   z-index: 100;
 }
-
 .Header__Title a {
   color: #FF8A00;
 }
-
-.Header__NavList,
-.Header #menu-header-menu {
+.Header__NavList, .Header #menu-header-menu {
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -54,11 +51,9 @@ html {
   transform: translate(-50%, -50%);
   height: 100%;
 }
-
 .Header__ListItem {
   height: 100%;
 }
-
 .Header__Link {
   align-self: center;
   font-weight: bold;
@@ -72,7 +67,6 @@ html {
   align-items: center;
   color: #FF8A00;
 }
-
 .Header__Link::after {
   content: "";
   height: 0.2rem;
@@ -85,53 +79,23 @@ html {
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
-
-.Header__Link:hover::after,
-.Header__Link:focus::after {
+.Header__Link:hover::after, .Header__Link:focus::after {
   transform: translate(-50%, -4rem);
   opacity: 1;
 }
-
 .Header__Link--CurrentMenuItem.Header__Link::after {
   transform: translate(-50%, -4rem);
   opacity: 1;
 }
-
 .Header .current_page_item.menu-item a::after {
   transform: translate(-50%, -4rem);
   opacity: 1;
 }
-
-.ButtonRound {
-  width: 16rem;
-  height: 5.6rem;
-  text-align: center;
-  background-image: linear-gradient(to right, #FF8A00, #FFC000);
-  border-radius: 10rem;
-  color: #FFFFFF;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-  transform: translateY(0);
-  transition: all 0.3s ease-in-out;
+.Header__ButtonRoundWrapper {
+  display: flex;
 }
 
-.ButtonRound:hover {
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.18);
-  transform: translateY(-4px);
-}
-
-.ButtonRound :not(:last-child) {
-  margin-right: 0.8rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+h1, h2, h3, h4, h5, h6, p {
   color: white;
 }
 
@@ -143,20 +107,17 @@ h3 {
   font-size: 4.4rem;
 }
 
-p,
-a {
+p, a {
   font-size: 1.8rem;
 }
 
 .Page {
   background: #FFFFFF;
 }
-
 .Page__BackgroundImage {
   padding-top: 51.7rem;
   position: relative;
 }
-
 .Page__BackgroundOverlay {
   position: absolute;
   top: 0;
@@ -166,7 +127,6 @@ a {
   background: radial-gradient(to right, #FFFFFF, transparent);
   background-image: radial-gradient(circle at left, #FFFFFF, #FFFFFF, rgba(255, 255, 255, 0.7), transparent);
 }
-
 .Page__Wrapper {
   position: absolute;
   top: 0;
@@ -176,33 +136,30 @@ a {
   justify-content: space-between;
   width: 100%;
 }
-
-.Page__Title,
-.Page h3 {
+.Page__Title, .Page h3 {
   color: #FF8A00;
 }
-
 .Page p {
   color: #5C5C5C;
 }
-
-.Page__BreadcrumbLink,
-.Page__BreadcrumbHomeLink {
+.Page__Content {
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+.Page__BreadcrumbLink, .Page__BreadcrumbHomeLink {
   font-size: 1.5rem;
   padding: 0.5rem 1.5rem;
   display: inline-block;
 }
-
 .Page__BreadcrumbHomeLink {
   background: #212121;
 }
-
 .Page__BreadcrumbLink {
   color: #212121;
   position: relative;
   margin-left: 0.3rem;
 }
-
 .Page__BreadcrumbLink::before {
   content: ">";
   position: absolute;
@@ -210,15 +167,12 @@ a {
   left: 0;
   transform: translate(0, -50%);
 }
-
 .Page__ChildrenAside * {
   color: #212121;
 }
-
 .Page__ParentTitle {
   background-color: #FF8A00;
 }
-
 .Page__ChildrenNavList {
   list-style: none;
   background-color: #FFF7DF;
@@ -228,19 +182,213 @@ a {
   height: 27.3rem;
   background: #212121;
 }
-
 .Footer__NavWrapper {
   display: flex;
   justify-content: space-around;
 }
-
 .Footer__NavWrapper * {
   list-style: none;
 }
-
 .Footer__Bottom {
   background: #000000;
   height: 3.9rem;
+}
+
+.ButtonRound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16rem;
+  height: 5.6rem;
+  text-align: center;
+  background-image: linear-gradient(to right, #FF8A00, #FFC000);
+  border-radius: 10rem;
+  color: #FFFFFF;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+  font-size: 1.4rem;
+}
+.ButtonRound:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.18);
+  transform: translateY(-4px);
+}
+.ButtonRound :not(:last-child) {
+  margin-right: 0.8rem;
+}
+.ButtonRound--White {
+  background: #FFFFFF;
+  color: #FF8A00;
+}
+
+.Blog {
+  background: #FFFFFF;
+}
+.Blog__BackgroundImage {
+  padding-top: 51.7rem;
+  position: relative;
+}
+.Blog__BackgroundOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(to right, #FFFFFF, transparent);
+  background-image: radial-gradient(circle at left, #FFFFFF, #FFFFFF, rgba(255, 255, 255, 0.7), transparent);
+}
+.Blog__Wrapper {
+  padding: 10rem 30rem;
+  width: 100%;
+}
+.Blog__Title {
+  color: #FF8A00;
+}
+.Blog__RichText h3 {
+  color: #FF8A00;
+}
+.Blog__RichText p {
+  color: #5C5C5C;
+}
+.Blog__BreadcrumbLink, .Blog__BreadcrumbHomeLink {
+  font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  display: inline-block;
+}
+.Blog__BreadcrumbHomeLink {
+  background: #212121;
+}
+.Blog__BreadcrumbLink {
+  color: #212121;
+  position: relative;
+  margin-left: 0.3rem;
+}
+.Blog__BreadcrumbLink::before {
+  content: ">";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+.Blog__ChildrenAside * {
+  color: #212121;
+}
+.Blog__ParentTitle {
+  background-color: #FF8A00;
+}
+.Blog__ChildrenNavList {
+  list-style: none;
+  background-color: #FFF7DF;
+}
+.Blog__BlogPostsWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.Blog__BlogPostWrapper {
+  padding: 6rem 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.Blog .page-numbers {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 5rem;
+  background: #FFFFFF;
+  border-radius: 50%;
+  color: #000000;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+.Blog .page-numbers.current {
+  background: radial-gradient(#FFC000, #FF8A00);
+  color: #FFFFFF;
+}
+.Blog .page-numbers.next,
+.Blog .page-numbers.prev {
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.BlogPost {
+  width: 76.7rem;
+  height: 78.3rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.BlogPost__Figure {
+  width: 100%;
+  height: calc(425 / 783 * 100%);
+  background-color: #FFF7DF;
+}
+.BlogPost__Section {
+  background: linear-gradient(to right top, #0085FF, #00D1FF);
+  height: calc(358 / 783 * 100%);
+  position: relative;
+  z-index: 0;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  overflow: hidden;
+}
+.BlogPost__Section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("images/blogWave3.svg");
+  fill: green;
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.BlogPost__Content {
+  position: relative;
+  z-index: 2;
+  padding: 5rem 8rem;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.BlogPost__Title {
+  color: #FFFFFF;
+  font-size: 3.2rem;
+  margin-bottom: 1.5rem;
+}
+.BlogPost__MetaBox {
+  margin-bottom: 2.5rem;
+  font-size: 1.5rem;
+}
+.BlogPost__Preamble {
+  color: #FFFFFF;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
+.BlogPost__Preamble + p {
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+.Single__BreadcrumbLink + a {
+  color: #000000;
+  color: #000000;
+}
+
+.Page__Breadcrumb {
+  font-size: 2.2rem;
+}
+.Page__Breadcrumb a:not(:first-child) {
+  color: #000000;
 }
 
 body {
@@ -254,14 +402,12 @@ body {
   padding: 20rem 0;
   position: relative;
 }
-
 .FrontPage__Title {
   position: relative;
   font-size: 4.4rem;
   font-weight: 900;
   z-index: 10;
 }
-
 .FrontPage__AlphaImage {
   position: absolute;
   top: 0;
@@ -270,4 +416,3 @@ body {
   bottom: 0;
   background-size: 82rem;
 }
-
