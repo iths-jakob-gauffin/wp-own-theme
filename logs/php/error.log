@@ -5,3 +5,15 @@
 [30-Oct-2020 23:21:14 UTC] PHP   3. require_once() C:\Users\jakob\Local Sites\egettheme\app\public\wp-blog-header.php:19
 [30-Oct-2020 23:21:14 UTC] PHP   4. include() C:\Users\jakob\Local Sites\egettheme\app\public\wp-includes\template-loader.php:106
 [31-Oct-2020 01:01:13 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\functions.php on line 25
+[31-Oct-2020 20:10:11 UTC] PHP Parse error:  syntax error, unexpected '<' in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\page.php on line 16
+[31-Oct-2020 20:10:21 UTC] PHP Parse error:  syntax error, unexpected '<' in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\page.php on line 16
+[31-Oct-2020 20:10:46 UTC] PHP Parse error:  syntax error, unexpected '<' in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\page.php on line 16
+[31-Oct-2020 20:13:11 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function wp_get_post_parent_id(), 0 passed in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\page.php on line 14 and exactly 1 expected in C:\Users\jakob\Local Sites\egettheme\app\public\wp-includes\post.php:7069
+Stack trace:
+#0 C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\page.php(14): wp_get_post_parent_id()
+#1 C:\Users\jakob\Local Sites\egettheme\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\jakob\\...')
+#2 C:\Users\jakob\Local Sites\egettheme\app\public\wp-blog-header.php(19): require_once('C:\\Users\\jakob\\...')
+#3 C:\Users\jakob\Local Sites\egettheme\app\public\index.php(17): require('C:\\Users\\jakob\\...')
+#4 {main}
+  thrown in C:\Users\jakob\Local Sites\egettheme\app\public\wp-includes\post.php on line 7069
+[31-Oct-2020 21:55:39 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\page.php on line 37
