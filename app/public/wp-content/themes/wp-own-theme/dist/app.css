@@ -40,7 +40,8 @@ html {
   color: #FF8A00;
 }
 
-.Header__NavList {
+.Header__NavList,
+.Header #menu-header-menu {
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -54,16 +55,24 @@ html {
   height: 100%;
 }
 
-.Header__Link {
+.Header .menu-item {
   align-self: center;
   font-weight: bold;
   color: inherit;
   font-size: 1.5rem;
   padding: 0.5rem;
   position: relative;
+  display: inline-block;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.Header__Link::after {
+.Header .menu-item a {
+  color: #FF8A00;
+}
+
+.Header .menu-item a::after {
   content: "";
   height: 0.2rem;
   width: 3rem;
@@ -71,13 +80,18 @@ html {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, 5rem);
+  transform: translate(-50%, 1rem);
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
 
-.Header__Link:hover::after {
-  transform: translate(-50%, 0rem);
+.Header .menu-item:hover a::after {
+  transform: translate(-50%, -4rem);
+  opacity: 1;
+}
+
+.Header .current_page_item.menu-item a::after {
+  transform: translate(-50%, -4rem);
   opacity: 1;
 }
 
@@ -122,7 +136,8 @@ h3 {
   font-size: 4.4rem;
 }
 
-p {
+p,
+a {
   font-size: 1.8rem;
 }
 
@@ -150,6 +165,9 @@ p {
   top: 0;
   left: 0;
   padding: 10rem 30rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .Page__Title,
@@ -161,9 +179,56 @@ p {
   color: #5C5C5C;
 }
 
+.Page__BreadcrumbLink,
+.Page__BreadcrumbHomeLink {
+  font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  display: inline-block;
+}
+
+.Page__BreadcrumbHomeLink {
+  background: #212121;
+}
+
+.Page__BreadcrumbLink {
+  color: #212121;
+  position: relative;
+  margin-left: 0.3rem;
+}
+
+.Page__BreadcrumbLink::before {
+  content: ">";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+.Page__ChildrenAside * {
+  color: #212121;
+}
+
+.Page__ParentTitle {
+  background-color: #FF8A00;
+}
+
+.Page__ChildrenNavList {
+  list-style: none;
+  background-color: #FFF7DF;
+}
+
 .Footer__Content {
   height: 27.3rem;
   background: #212121;
+}
+
+.Footer__NavWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Footer__NavWrapper * {
+  list-style: none;
 }
 
 .Footer__Bottom {
@@ -180,10 +245,22 @@ body {
   height: 100%;
   background-image: linear-gradient(to right, #FF8A00, #FFC000);
   padding: 20rem 0;
+  position: relative;
 }
 
 .FrontPage__Title {
+  position: relative;
   font-size: 4.4rem;
   font-weight: 900;
+  z-index: 10;
+}
+
+.FrontPage__AlphaImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: 82rem;
 }
 

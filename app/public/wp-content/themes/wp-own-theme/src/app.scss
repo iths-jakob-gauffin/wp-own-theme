@@ -21,10 +21,22 @@ body{
         height: 100%;
         background-image: linear-gradient(to right, $orange, $yellow);
         padding: 20rem 0;
+        position: relative;
     }
 
     &__Title{
+        position: relative;
         font-size: 4.4rem;
         font-weight: 900;
+        z-index: 10;
+    }
+
+    &__AlphaImage{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: 82rem;
     }
 }
