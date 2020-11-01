@@ -55,7 +55,11 @@ html {
   height: 100%;
 }
 
-.Header .menu-item {
+.Header__ListItem {
+  height: 100%;
+}
+
+.Header__Link {
   align-self: center;
   font-weight: bold;
   color: inherit;
@@ -66,13 +70,10 @@ html {
   height: 100%;
   display: flex;
   align-items: center;
-}
-
-.Header .menu-item a {
   color: #FF8A00;
 }
 
-.Header .menu-item a::after {
+.Header__Link::after {
   content: "";
   height: 0.2rem;
   width: 3rem;
@@ -85,7 +86,13 @@ html {
   transition: all 0.3s ease-in-out;
 }
 
-.Header .menu-item:hover a::after {
+.Header__Link:hover::after,
+.Header__Link:focus::after {
+  transform: translate(-50%, -4rem);
+  opacity: 1;
+}
+
+.Header__Link--CurrentMenuItem.Header__Link::after {
   transform: translate(-50%, -4rem);
   opacity: 1;
 }
