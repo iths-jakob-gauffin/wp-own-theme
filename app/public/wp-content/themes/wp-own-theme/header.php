@@ -15,7 +15,7 @@
                         <li class="Header__ListItem">
                             <a href="<?php echo site_url(); ?>" 
                             class="<?php 
-                                    $cssClass = (is_home()? 'Header__Link Header__Link--CurrentMenuItem' : 'Header__Link');
+                                    $cssClass = (is_front_page()? 'Header__Link Header__Link--CurrentMenuItem' : 'Header__Link');
                                     echo $cssClass ?>"
                             >Home</a>
                         </li>
@@ -30,14 +30,18 @@
                         <li class="Header__ListItem">
                             <a href="<?php echo site_url('/blog'); ?>" 
                             class="<?php 
-                                    $cssClass = (is_page('blog')? 'Header__Link Header__Link--CurrentMenuItem' : 'Header__Link');
+                                    if(is_home() or wp_get_post_parent_id( get_the_ID() ) === 9){
+                                        $cssClass = 'Header__Link Header__Link--CurrentMenuItem';
+                                    } else {
+                                        $cssClass = 'Header__Link';
+                                    }
                                     echo $cssClass ?>"
                             >Blog</a>
                         </li>
                         <li class="Header__ListItem">
                             <a href="<?php echo site_url('/about-us')?> " 
                             class="<?php 
-                                    if(is_page('about-us') or wp_get_post_parent_id( get_the_ID() ) == '7'){
+                                    if(is_page('about-us') or wp_get_post_parent_id( get_the_ID() ) === 7){
                                         $cssClass = 'Header__Link Header__Link--CurrentMenuItem';
                                     } else {
                                         $cssClass = 'Header__Link';
@@ -55,8 +59,8 @@
                     </ul>
                 </nav>
                 <div class="Header__ButtonRoundWrapper">
-                    <button class="ButtonRound">Be A Contributor</button>
-                    <button class="ButtonRound">Login</button>
+                    <a href="#" class="ButtonRound">Be A Contributor</a>
+                    <a href="#" class="ButtonRound">Login</a>
                 </div>
             </header>
         <!-- </div> -->
