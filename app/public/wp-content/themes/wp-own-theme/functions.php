@@ -21,9 +21,13 @@
     add_action("wp_enqueue_scripts", "scripts");
 
     function ownThemeFeatures() {
+        register_nav_menu( 'headerMenuLocation', 'Header Menu Location' );
+        register_nav_menu( 'footerMenuLocation1', 'Footer Menu Location 1' );
+        register_nav_menu( 'footerMenuLocation2', 'Footer Menu Location 2' );
+        register_nav_menu( 'footerMenuLocation3', 'Footer Menu Location 3' );
         add_theme_support( 'title_tag');
     }
 
-    //Denna uppdaterar titel-taggen för varje sida du är på. Kan vara bra, v nr 13 
+    //Denna uppdaterar titel-taggen för varje sida du är på. Kan vara bra, v nr 13. ÄVEN HÄR SLÄNGER VI IN MENYN
     add_action('after_setup_theme', 'ownThemeFeatures');
 
