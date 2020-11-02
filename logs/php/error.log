@@ -54,3 +54,8 @@ Stack trace:
 [01-Nov-2020 22:04:54 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\archive.php on line 13
 [01-Nov-2020 22:05:06 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\archive.php on line 13
 [01-Nov-2020 22:05:19 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\archive.php on line 16
+[02-Nov-2020 21:10:14 UTC] PHP Parse error:  syntax error, unexpected 'while' (T_WHILE) in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\front-page.php on line 25
+[02-Nov-2020 21:10:35 UTC] PHP Parse error:  syntax error, unexpected 'while' (T_WHILE) in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\front-page.php on line 25
+[02-Nov-2020 21:11:05 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\front-page.php on line 24
+[02-Nov-2020 21:11:20 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\front-page.php on line 24
+[02-Nov-2020 21:11:37 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\front-page.php on line 24

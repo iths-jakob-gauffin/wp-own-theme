@@ -30,7 +30,7 @@
                         <li class="Header__ListItem">
                             <a href="<?php echo site_url('/blog'); ?>" 
                             class="<?php 
-                                    if(is_home() or wp_get_post_parent_id( get_the_ID() ) === 9){
+                                    if(get_post_type() == 'post'){
                                         $cssClass = 'Header__Link Header__Link--CurrentMenuItem';
                                     } else {
                                         $cssClass = 'Header__Link';

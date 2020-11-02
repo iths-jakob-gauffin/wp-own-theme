@@ -24,7 +24,35 @@ body{
         height: 100%;
         background-image: linear-gradient(to right, $orange, $yellow);
         padding: 20rem 0;
+        height: 69.8rem;
         position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: 42.6rem 38.2rem;
+            background-image: url('./images/icons.svg');
+            background-position: calc(100% - 20rem) top; 
+            background-repeat: no-repeat;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: 82rem;
+            background-image: url('./images/scooter.png');
+            background-position: 100% bottom; 
+            background-size: 82rem; 
+            background-repeat: no-repeat;
+        }
     }
 
     &__Title{
@@ -34,12 +62,89 @@ body{
         z-index: 10;
     }
 
-    &__AlphaImage{
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-size: 82rem;
+    &__BlogSection{
+        height: 67.8rem;
+        width: 100%;
+        position: relative;
+        background: url('images/sphere2.svg');
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat;
+        
+
+        // &::before{
+        //     content: "";
+        //     width: 100;
+            
+        // }
+
+        &::after{
+            content: "";
+            background: url('images/palmtreelowres.jpg');
+            background-position: -30rem;
+            background-repeat: no-repeat;
+            position: absolute;
+            background-size: 1100px;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__BlogContentInner{
+        // display: flex;
+        // justify-content: flex-end;
+        // width: 100%;
+        // height: 100%;
+        height: 100%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid red;
+    }
+
+    .container{
+        height: 100%;
+    }
+
+    &__BlogContentWrapper{
+        // height: 100%;
+        // width: 70rem;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        border: 1px solid green;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__BlogContentInner{
+        display: flex;
+        justify-content: center;
+        border: 1px solid blue;
+        
+    }
+
+    &__BlogSectionTitle{
+        color: $black;
+    }
+
+    &__BlogList{
+        list-style: none;
+    }
+
+    &__BlogLink{
+        font-size: 2rem;
+        color: $orange;
+    }
+
+    &__BlogText{
+        color: $black;
+        hyphens: auto;
     }
 }

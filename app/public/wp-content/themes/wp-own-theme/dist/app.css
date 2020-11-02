@@ -8,7 +8,6 @@
 
 a {
   text-decoration: none;
-  color: white;
 }
 
 html {
@@ -97,6 +96,10 @@ html {
 
 h1, h2, h3, h4, h5, h6, p {
   color: white;
+}
+
+a {
+  color: #FF8A00;
 }
 
 h2 {
@@ -400,7 +403,33 @@ body {
   height: 100%;
   background-image: linear-gradient(to right, #FF8A00, #FFC000);
   padding: 20rem 0;
+  height: 69.8rem;
   position: relative;
+}
+.FrontPage__StartBackground::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: 42.6rem 38.2rem;
+  background-image: url("./images/icons.svg");
+  background-position: calc(100% - 20rem) top;
+  background-repeat: no-repeat;
+}
+.FrontPage__StartBackground::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: 82rem;
+  background-image: url("./images/scooter.png");
+  background-position: 100% bottom;
+  background-size: 82rem;
+  background-repeat: no-repeat;
 }
 .FrontPage__Title {
   position: relative;
@@ -408,11 +437,64 @@ body {
   font-weight: 900;
   z-index: 10;
 }
-.FrontPage__AlphaImage {
+.FrontPage__BlogSection {
+  height: 67.8rem;
+  width: 100%;
+  position: relative;
+  background: url("images/sphere2.svg");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+.FrontPage__BlogSection::after {
+  content: "";
+  background: url("images/palmtreelowres.jpg");
+  background-position: -30rem;
+  background-repeat: no-repeat;
   position: absolute;
+  background-size: 1100px;
+  z-index: -1;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-size: 82rem;
+  width: 100%;
+  height: 100%;
+}
+.FrontPage__BlogContentInner {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid red;
+}
+.FrontPage .container {
+  height: 100%;
+}
+.FrontPage__BlogContentWrapper {
+  border: 1px solid green;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+}
+.FrontPage__BlogContentInner {
+  display: flex;
+  justify-content: center;
+  border: 1px solid blue;
+}
+.FrontPage__BlogSectionTitle {
+  color: #000000;
+}
+.FrontPage__BlogList {
+  list-style: none;
+}
+.FrontPage__BlogLink {
+  font-size: 2rem;
+  color: #FF8A00;
+}
+.FrontPage__BlogText {
+  color: #000000;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
