@@ -1,14 +1,22 @@
-.Single__BreadcrumbLink{
-  & + a{
-    color: $black;
-    color: $black;
-    
-  }
+.Single__BreadcrumbLink {
+    & + a {
+        color: $black;
+    }
 }
 
-.Page__Breadcrumb{
-  font-size: 2.2rem;
-  a:not(:first-child){
-    color: $black;
-  };
+.Page__Breadcrumb {
+    font-size: 2.2rem;
+    a:not(:first-child) {
+        color: $black;
+    }
+}
+
+.SinglePage__Content {
+    word-break: break-all;
+
+    // p {
+    //     word-wrap: break-word;
+    //     white-space: normal;
+    // }
+    color: green;
 }

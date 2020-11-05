@@ -21,11 +21,11 @@
                         </li>
                         <li class="Header__ListItem">
                             <a 
-                            href="<?php echo site_url('/courses'); ?>" 
+                            href="<?php echo site_url('/community'); ?>" 
                             class="<?php 
-                                    $cssClass = (is_page('courses')? 'Header__Link Header__Link--CurrentMenuItem' : 'Header__Link');
+                                    $cssClass = (is_page('community')? 'Header__Link Header__Link--CurrentMenuItem' : 'Header__Link');
                                     echo $cssClass ?>"
-                            >Courses</a>
+                            >Community</a>
                         </li>
                         <li class="Header__ListItem">
                             <a href="<?php echo site_url('/blog'); ?>" 
@@ -59,8 +59,19 @@
                     </ul>
                 </nav>
                 <div class="Header__ButtonRoundWrapper">
-                    <a href="#" class="ButtonRound">Be A Contributor</a>
-                    <a href="#" class="ButtonRound">Login</a>
+                <?php 
+                    if(is_user_logged_in()){ ?>
+                        <span class="Header__LoggedInText"><?php
+                        $user = wp_get_current_user();
+                        echo "Inloggad som: " . $user->display_name; ?></span>
+                        <a href="<?php echo wp_logout_url(home_url()); ?>" class="ButtonRound">Log Out</a>
+                        <?php
+                    } else { ?>
+                        <a href="<?php echo wp_registration_url(); ?>" class="ButtonRound">Sign up</a>
+                        <a href="<?php echo wp_login_url(); ?>" class="ButtonRound">Log in</a>
+                        <?php
+                    }
+                    ?>
                 </div>
             </header>
         <!-- </div> -->

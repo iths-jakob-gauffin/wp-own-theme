@@ -6,7 +6,7 @@
             
             <div class="container">
                 <section class="FrontPage__Entry">
-                    <h1 class="FrontPage__Title">Get access to Unlimited Educational Resources. Everywhere, Everytime!</h1>
+                    <h1 class="FrontPage__Title">Hejdå Get access to Unlimited Educational Resources. Everywhere, Everytime!</h1>
                 </section>
                     
             </div>
@@ -16,9 +16,37 @@
                 <div class="FrontPage__BlogContentWrapper">
 
                     <div class="FrontPage__BlogContentInner">
+                        <h2 class="FrontPage__BlogSectionTitle">Upcoming events</h2>
+                        <ul class="FrontPage__EventList">
+                        <?php
+                            $frontPageEvents = new WP_Query(array(
+                                    'posts_per_page' => 2,
+                                    'post_type' => 'event'
+                            ));
+
+                            while($frontPageEvents->have_posts()){
+                                $frontPageEvents->the_post(); 
+                                ?>
+                                <li class="FrontPage__EventListItem"><strong><a href="<?php the_permalink();?>" class="FrontPage__EventLink"><?php the_title(); ?></a></strong>
+                                <div class="FrontPage__BlogText">
+                                    <?php 
+                                    if(has_excerpt()){
+                                        the_excerpt();
+                                    }else{
+                                        echo wp_trim_words(get_the_content(), 18, '...'); 
+                                    }
+                                    ?>
+                                </div>
+                                </li>
+                                <?php
+                            } ?>                        
+                        </ul>
+                        <a href="<?php echo get_post_type_archive_link('event'); ?>" class="ButtonRound">See all Events</a>
+
                         <h2 class="FrontPage__BlogSectionTitle">From the blog</h2>
                         <ul class="FrontPage__BlogList">
                             <?php 
+
                             $frontPagePosts = new WP_Query(array(
                                 'posts_per_page' => 3
                             ));                        
@@ -27,12 +55,16 @@
                                 $frontPagePosts->the_post(); ?> 
                                 <li class="FrontPage__BlogListItem">
                                     <strong><a href="<?php the_permalink(); ?>" class="FrontPage__BlogLink"><?php the_title(); ?></a></strong>
-                                    <p class="FrontPage__BlogText">
+                                    <div class="FrontPage__BlogText">
                                         <?php 
-                                        $stuff = get_the_content();
-                                        echo wp_trim_words( get_the_content(), 4, '...');
-                                        
-                                        ?></p><a href="<?php the_permalink(); ?>">Read more</a>
+                                            if(has_excerpt()){
+                                                the_excerpt(  );
+                                            } else{
+                                                echo wp_trim_words(get_the_excerpt(), 5);
+                                            }
+                                        ?>
+                                    </div>
+                                    <a href="<?php the_permalink(); ?>">Read more</a>
                                 </li>
                             <?php 
                             };

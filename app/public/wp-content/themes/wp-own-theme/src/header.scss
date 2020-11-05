@@ -1,6 +1,6 @@
 @import "./variables.scss";
 
-.Header{
+.Header {
     height: 11.4rem;
     background-color: $white;
     display: flex;
@@ -12,15 +12,16 @@
     overflow: hidden;
     margin: 0 auto;
     padding: 0 20rem;
-    box-shadow: 0 12px 35px rgba(160, 121, 0, .2);
+    box-shadow: 0 12px 35px rgba(160, 121, 0, 0.2);
     position: relative;
     z-index: 100;
 
-    &__Title a{
+    &__Title a {
         color: $orange;
     }
 
-    &__NavList, #menu-header-menu{
+    &__NavList,
+    #menu-header-menu {
         position: absolute;
         display: flex;
         justify-content: space-between;
@@ -35,19 +36,19 @@
         height: 100%;
     }
 
-    &__ListItem{
+    &__ListItem {
         height: 100%;
         // display: flex;
         // align-items: center;
         // border: 1px solid red;
     }
-    
+
     &__Link {
         align-self: center;
         font-weight: bold;
         color: inherit;
         font-size: 1.5rem;
-        padding: .5rem;
+        padding: 0.5rem;
         position: relative;
         display: inline-block;
         height: 100%;
@@ -55,9 +56,9 @@
         align-items: center;
         color: $orange;
 
-        &::after{
+        &::after {
             content: "";
-            height: .2rem;
+            height: 0.2rem;
             width: 3rem;
             background: $orange;
             position: absolute;
@@ -65,19 +66,18 @@
             left: 50%;
             transform: translate(-50%, 1rem);
             opacity: 0;
-            transition: all .3s ease-in-out;
-
+            transition: all 0.3s ease-in-out;
         }
-        
 
-        &:hover, &:focus{
-            &::after{
+        &:hover,
+        &:focus {
+            &::after {
                 transform: translate(-50%, -4rem);
                 opacity: 1;
-            }    
-        } 
+            }
+        }
 
-        &--CurrentMenuItem.Header__Link::after{
+        &--CurrentMenuItem.Header__Link::after {
             transform: translate(-50%, -4rem);
             opacity: 1;
         }
@@ -95,16 +95,15 @@
         //     transition: all .3s ease-in-out;
 
         // }
-        
+
         // &:hover{
         //     &::after{
         //         transform: translate(-50%, 0rem);
         //         opacity: 1;
         //     }
         // }
-
     }
-    .current_page_item.menu-item a::after{
+    .current_page_item.menu-item a::after {
         transform: translate(-50%, -4rem);
         opacity: 1;
     }
@@ -114,8 +113,12 @@
     //     border: 1px solid black;
     // }
 
-    &__ButtonRoundWrapper{
+    &__ButtonRoundWrapper {
         display: flex;
+    }
+
+    &__LoggedInText {
+        font-size: 1.5rem;
     }
 }
 
@@ -126,4 +129,3 @@
 //         font-size: 5rem;
 //     }
 // }
-

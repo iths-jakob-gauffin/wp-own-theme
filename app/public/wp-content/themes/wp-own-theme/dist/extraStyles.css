@@ -1,0 +1,20 @@
+.wpf-head-bar {
+    /* display: none; */
+    /* background-color: red; */
+}
+
+.wpf-subforum-sep {
+    display: none;
+}
+
+#wpforo-title {
+    display: none;
+}
+
+#wpforo > #wpforo-wrap > .wpforo-subtop {
+    display: none !important;
+}
+
+#wpforo-wrap {
+    padding-top: 0 !important;
+}

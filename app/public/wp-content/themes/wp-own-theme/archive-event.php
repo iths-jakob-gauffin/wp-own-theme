@@ -16,8 +16,8 @@
                                 };
                                 ?></h2>
                                 <div class="Blog__RichText">
-                                    <h3>Welcome To Our Forever Updated Blog Post!</h3>
-                                    <p>Be informed! Never miss a single post.</p>
+                                    <h3>Here is the Event archive</h3>
+                                    <p>Look at all the events</p>
                                 </div>
 
                                 <div class="Blog__BlogPostsWrapper">

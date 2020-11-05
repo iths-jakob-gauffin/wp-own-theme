@@ -59,3 +59,114 @@ Stack trace:
 [02-Nov-2020 21:11:05 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\front-page.php on line 24
 [02-Nov-2020 21:11:20 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\front-page.php on line 24
 [02-Nov-2020 21:11:37 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\front-page.php on line 24
+[02-Nov-2020 22:47:36 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\functions.php on line 39
+[02-Nov-2020 22:47:49 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\functions.php on line 39
+[02-Nov-2020 22:59:39 UTC] PHP Fatal error:  Cannot redeclare ownThemePostTypes() (previously declared in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\mu-plugins\ownThemePostTypes.php:3) in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\functions.php on line 35
+[02-Nov-2020 22:59:39 UTC] PHP Stack trace:
+[02-Nov-2020 22:59:39 UTC] PHP   1. {main}() C:\Users\jakob\Local Sites\egettheme\app\public\wp-admin\admin-ajax.php:0
+[02-Nov-2020 22:59:39 UTC] PHP   2. require_once() C:\Users\jakob\Local Sites\egettheme\app\public\wp-admin\admin-ajax.php:22
+[02-Nov-2020 22:59:39 UTC] PHP   3. require_once() C:\Users\jakob\Local Sites\egettheme\app\public\wp-load.php:37
+[02-Nov-2020 22:59:39 UTC] PHP   4. require_once() C:\Users\jakob\Local Sites\egettheme\app\public\wp-config.php:77
+[03-Nov-2020 22:40:25 UTC] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF) in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\functions.php on line 14
+[03-Nov-2020 22:44:32 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\functions.php on line 12
+[03-Nov-2020 22:54:39 UTC] PHP Recoverable fatal error:  Object of class WP_Post could not be converted to string in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\functions.php on line 17
+[03-Nov-2020 22:54:39 UTC] PHP Stack trace:
+[03-Nov-2020 22:54:39 UTC] PHP   1. {main}() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\index.php:0
+[03-Nov-2020 22:54:39 UTC] PHP   2. require() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\index.php:17
+[03-Nov-2020 22:54:39 UTC] PHP   3. require_once() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-blog-header.php:19
+[03-Nov-2020 22:54:39 UTC] PHP   4. include() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\template-loader.php:106
+[03-Nov-2020 22:54:39 UTC] PHP   5. get_header() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\page.php:3
+[03-Nov-2020 22:54:39 UTC] PHP   6. locate_template() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\general-template.php:48
+[03-Nov-2020 22:54:39 UTC] PHP   7. load_template() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\template.php:676
+[03-Nov-2020 22:54:39 UTC] PHP   8. require_once() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\template.php:730
+[03-Nov-2020 22:54:39 UTC] PHP   9. wp_head() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\header.php:7
+[03-Nov-2020 22:54:39 UTC] PHP  10. do_action() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\general-template.php:3009
+[03-Nov-2020 22:54:39 UTC] PHP  11. WP_Hook->do_action() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\plugin.php:478
+[03-Nov-2020 22:54:39 UTC] PHP  12. WP_Hook->apply_filters() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\class-wp-hook.php:311
+[03-Nov-2020 22:54:39 UTC] PHP  13. wp_enqueue_scripts() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\class-wp-hook.php:287
+[03-Nov-2020 22:54:39 UTC] PHP  14. do_action() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\script-loader.php:2001
+[03-Nov-2020 22:54:39 UTC] PHP  15. WP_Hook->do_action() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\plugin.php:478
+[03-Nov-2020 22:54:39 UTC] PHP  16. WP_Hook->apply_filters() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\class-wp-hook.php:311
+[03-Nov-2020 22:54:39 UTC] PHP  17. eget_tema_files() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\class-wp-hook.php:287
+[04-Nov-2020 15:43:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_user_details() in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\header.php:63
+Stack trace:
+#0 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\template.php(730): require_once()
+#1 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\template.php(676): load_template('C:\\Users\\Jakob\\...', true, Array)
+#2 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\page.php(3): get_header()
+#4 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Jakob\\...')
+#5 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Jakob\\...')
+#6 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\index.php(17): require('C:\\Users\\Jakob\\...')
+#7 {main} in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\header.php on line 63
+[04-Nov-2020 15:44:34 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function get_userdata(), 0 passed in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\header.php on line 63 and exactly 1 expected in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\pluggable.php:83
+Stack trace:
+#0 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\header.php(63): get_userdata()
+#1 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\template.php(730): require_once('C:\\Users\\Jakob\\...')
+#2 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\template.php(676): load_template('C:\\Users\\Jakob\\...', true, Array)
+#3 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#4 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\page.php(3): get_header()
+#5 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\template-lo in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\pluggable.php on line 83
+[04-Nov-2020 15:58:25 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\functions.php on line 91
+[04-Nov-2020 15:58:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\functions.php:90) in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\includes\misc.php on line 1310
+[04-Nov-2020 15:58:38 UTC] PHP Stack trace:
+[04-Nov-2020 15:58:38 UTC] PHP   1. {main}() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\index.php:0
+[04-Nov-2020 15:58:38 UTC] PHP   2. require_once() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\index.php:10
+[04-Nov-2020 15:58:38 UTC] PHP   3. do_action() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\admin.php:175
+[04-Nov-2020 15:58:38 UTC] PHP   4. WP_Hook->do_action() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\plugin.php:478
+[04-Nov-2020 15:58:38 UTC] PHP   5. WP_Hook->apply_filters() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\class-wp-hook.php:311
+[04-Nov-2020 15:58:38 UTC] PHP   6. wp_admin_headers() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\class-wp-hook.php:287
+[04-Nov-2020 15:58:38 UTC] PHP   7. header() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\includes\misc.php:1310
+[04-Nov-2020 15:58:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\functions.php:90) in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\admin-header.php on line 9
+[04-Nov-2020 15:58:38 UTC] PHP Stack trace:
+[04-Nov-2020 15:58:38 UTC] PHP   1. {main}() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\index.php:0
+[04-Nov-2020 15:58:38 UTC] PHP   2. require_once() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\index.php:111
+[04-Nov-2020 15:58:38 UTC] PHP   3. header() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\admin-header.php:9
+[04-Nov-2020 15:58:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\functions.php:90) in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\option.php on line 1050
+[04-Nov-2020 15:58:38 UTC] PHP Stack trace:
+[04-Nov-2020 15:58:38 UTC] PHP   1. {main}() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\index.php:0
+[04-Nov-2020 15:58:38 UTC] PHP   2. require_once() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\index.php:111
+[04-Nov-2020 15:58:38 UTC] PHP   3. wp_user_settings() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\admin-header.php:70
+[04-Nov-2020 15:58:38 UTC] PHP   4. setcookie() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\option.php:1050
+[04-Nov-2020 15:58:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\functions.php:90) in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\option.php on line 1051
+[04-Nov-2020 15:58:38 UTC] PHP Stack trace:
+[04-Nov-2020 15:58:38 UTC] PHP   1. {main}() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\index.php:0
+[04-Nov-2020 15:58:38 UTC] PHP   2. require_once() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\index.php:111
+[04-Nov-2020 15:58:38 UTC] PHP   3. wp_user_settings() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\admin-header.php:70
+[04-Nov-2020 15:58:38 UTC] PHP   4. setcookie() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\option.php:1051
+[04-Nov-2020 15:58:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\functions.php:90) in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\includes\misc.php on line 1310
+[04-Nov-2020 15:58:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\functions.php:90) in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\includes\misc.php on line 1310
+[04-Nov-2020 15:58:39 UTC] PHP Stack trace:
+[04-Nov-2020 15:58:39 UTC] PHP Stack trace:
+[04-Nov-2020 15:58:39 UTC] PHP   1. {main}() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\admin-ajax.php:0
+[04-Nov-2020 15:58:39 UTC] PHP   1. {main}() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\admin-ajax.php:0
+[04-Nov-2020 15:58:39 UTC] PHP   2. do_action() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\admin-ajax.php:45
+[04-Nov-2020 15:58:39 UTC] PHP   2. do_action() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\admin-ajax.php:45
+[04-Nov-2020 15:58:39 UTC] PHP   3. WP_Hook->do_action() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\plugin.php:478
+[04-Nov-2020 15:58:39 UTC] PHP   3. WP_Hook->do_action() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\plugin.php:478
+[04-Nov-2020 15:58:39 UTC] PHP   4. WP_Hook->apply_filters() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\class-wp-hook.php:311
+[04-Nov-2020 15:58:39 UTC] PHP   4. WP_Hook->apply_filters() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\class-wp-hook.php:311
+[04-Nov-2020 15:58:39 UTC] PHP   5. wp_admin_headers() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\class-wp-hook.php:287
+[04-Nov-2020 15:58:39 UTC] PHP   5. wp_admin_headers() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\class-wp-hook.php:287
+[04-Nov-2020 15:58:39 UTC] PHP   6. header() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\includes\misc.php:1310
+[04-Nov-2020 15:58:39 UTC] PHP   6. header() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\includes\misc.php:1310
+[04-Nov-2020 15:58:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\functions.php:90) in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\includes\misc.php on line 1310
+[04-Nov-2020 15:58:39 UTC] PHP Stack trace:
+[04-Nov-2020 15:58:39 UTC] PHP   1. {main}() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\admin-ajax.php:0
+[04-Nov-2020 15:58:39 UTC] PHP   2. do_action() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\admin-ajax.php:45
+[04-Nov-2020 15:58:39 UTC] PHP   3. WP_Hook->do_action() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\plugin.php:478
+[04-Nov-2020 15:58:39 UTC] PHP   4. WP_Hook->apply_filters() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\class-wp-hook.php:311
+[04-Nov-2020 15:58:39 UTC] PHP   5. wp_admin_headers() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\class-wp-hook.php:287
+[04-Nov-2020 15:58:39 UTC] PHP   6. header() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-admin\includes\misc.php:1310
+[05-Nov-2020 13:23:42 UTC] PHP Recoverable fatal error:  Object of class WP_User could not be converted to string in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\header.php on line 65
+[05-Nov-2020 13:23:42 UTC] PHP Stack trace:
+[05-Nov-2020 13:23:42 UTC] PHP   1. {main}() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\index.php:0
+[05-Nov-2020 13:23:42 UTC] PHP   2. require() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\index.php:17
+[05-Nov-2020 13:23:42 UTC] PHP   3. require_once() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-blog-header.php:19
+[05-Nov-2020 13:23:42 UTC] PHP   4. include() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\template-loader.php:106
+[05-Nov-2020 13:23:42 UTC] PHP   5. get_header() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\page.php:3
+[05-Nov-2020 13:23:42 UTC] PHP   6. locate_template() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\general-template.php:48
+[05-Nov-2020 13:23:42 UTC] PHP   7. load_template() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\template.php:676
+[05-Nov-2020 13:23:42 UTC] PHP   8. require_once() C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\template.php:730
+[05-Nov-2020 19:10:13 UTC] PHP Parse error:  syntax error, unexpected ''public'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\mu-plugins\ownThemePostTypes.php on line 7
+[05-Nov-2020 20:34:40 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\front-page.php on line 51
+[05-Nov-2020 20:43:08 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\front-page.php on line 35

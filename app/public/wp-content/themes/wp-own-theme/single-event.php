@@ -4,31 +4,31 @@
 
     while(have_posts()){
         the_post(); ?>
-            <div class="Page">
+            <div class="SingleEvent">
 
-                <div class="Page__BackgroundImage" style="background-image: url(<?php echo get_theme_file_uri( '/images/guychickdog.webp' )?>); background-position: 50% 25%; background-size: cover;">
+                <div class="SingleEvent__BackgroundImage" style="background-image: url(<?php echo get_theme_file_uri( '/images/guychickdog.webp' )?>); background-position: 50% 25%; background-size: cover;">
 
-                    <div class="Page__BackgroundOverlay"></div>
+                    <div class="SingleEvent__BackgroundOverlay"></div>
                     
-                        <div class="Page__Wrapper">
-                            <main class="Page__Main">
+                        <div class="SingleEvent__Wrapper">
+                            <main class="SingleEvent__Main">
 
                                 <?php 
                                 //parent blir 0 om den inte har några barn.
                                 $parent = wp_get_post_parent_id(get_the_ID());
                                 
                                 // if($parent){?>
-                                    <div class="Page__Breadcrumb">
-                                        <a href="<?php echo site_url('/blog') ?>" class="Page__BreadcrumbHomeLink">Blog Home</a>
-                                        <a href="" class="Single__BreadcrumbLink"><?php the_time('j F, Y'); the_author_posts_link(); echo get_the_category_list(', '); ?></a>
+                                    <div class="SingleEvent__Breadcrumb">
+                                        <a href="<?php echo get_post_type_archive_link( 'event' ) ?>" class="SingleEvent__BreadcrumbHomeLink">Events Home</a>
+                                        <a href="" class="Single__BreadcrumbLink"><?php the_title(); ?></a>
                                     </div>                                    
                                     <?php
                                 // }
                                 ?>
 
 
-                                <h2 class="Page__Title"><?php the_title() ?></h2>
-                                <div class="SinglePage__Content"><?php the_content(); ?></div>
+                                <h2 class="SingleEvent__Title"><?php the_title() ?></h2>
+                                <div class="SingleEvent__Content"><?php the_content(); ?></div>
                             </main>
                                 
                             <?php 
@@ -39,10 +39,10 @@
 
                             //villkoret blir false om currentsidan sidan inte är en parent, samt om testarray blir null
                             if($parent or $testArray) { ?>
-                                <aside class="Page__ChildrenAside">
-                                    <h2 class="Page__ParentTitle"><a href="<?php echo get_permalink( $parent ); ?>"><?php echo get_the_title($parent)?></a></h2>
-                                    <nav class="Page__ChildrenNav">
-                                        <ul class="Page__ChildrenNavList">
+                                <aside class="SingleEvent__ChildrenAside">
+                                    <h2 class="SingleEvent__ParentTitle"><a href="<?php echo get_permalink( $parent ); ?>"><?php echo get_the_title($parent)?></a></h2>
+                                    <nav class="SingleEvent__ChildrenNav">
+                                        <ul class="SingleEvent__ChildrenNavList">
                                             <?php 
 
                                             if($parent){

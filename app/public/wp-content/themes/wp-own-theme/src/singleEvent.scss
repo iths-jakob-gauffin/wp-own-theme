@@ -1,0 +1,124 @@
+@import "./variables.scss";
+
+.SingleEvent {
+    background: $white;
+
+    &__Main {
+        // width: 100%;
+        // height: 100%;
+        // overflow: scroll;
+    }
+
+    &__BackgroundImage {
+        padding-top: 51.7rem;
+        position: relative;
+    }
+
+    &__BackgroundOverlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(to right, $white, transparent);
+        background-image: radial-gradient(
+            circle at left,
+            $white,
+            $white,
+            rgba(255, 255, 255, 0.7),
+            transparent
+        );
+    }
+
+    &__Wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10rem 30rem;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__Title,
+    h3 {
+        color: $orange;
+    }
+
+    p {
+        color: $gray;
+    }
+
+    &__Content {
+        max-width: 50rem;
+        hyphens: auto;
+        font-size: 1.5rem;
+        line-height: 1.6;
+        word-break: break-all;
+    }
+
+    &__Breadcrumb {
+        // background-color: black;
+    }
+
+    &__BreadcrumbLink,
+    &__BreadcrumbHomeLink {
+        font-size: 1.5rem;
+        padding: 0.5rem 1.5rem;
+        display: inline-block;
+    }
+
+    &__BreadcrumbHomeLink {
+        // background: linear-gradient(to right, $orange, $yellow);
+        background: $grayDark;
+    }
+
+    &__BreadcrumbLink {
+        // background: linear-gradient(to right, $yellow, transparent);
+        color: $grayDark;
+        position: relative;
+        margin-left: 0.3rem;
+
+        &::before {
+            content: ">";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+        }
+    }
+
+    &__ChildrenAside {
+        * {
+            color: $grayDark;
+        }
+    }
+
+    &__ParentTitle {
+        background-color: $orange;
+    }
+
+    &__ChildrenNavList {
+        list-style: none;
+        background-color: $cream;
+    }
+
+    // &__Wrapper{
+
+    //   padding: 10rem 20rem;
+
+    // }
+}
+
+.SingleEvent__BreadcrumbLink {
+    & + a {
+        color: $black;
+    }
+}
+
+.SingleEvent__Breadcrumb {
+    font-size: 2.2rem;
+    a:not(:first-child) {
+        color: $black;
+    }
+}

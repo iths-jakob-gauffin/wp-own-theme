@@ -37,7 +37,8 @@ html {
 .Header__Title a {
   color: #FF8A00;
 }
-.Header__NavList, .Header #menu-header-menu {
+.Header__NavList,
+.Header #menu-header-menu {
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -92,6 +93,9 @@ html {
 }
 .Header__ButtonRoundWrapper {
   display: flex;
+}
+.Header__LoggedInText {
+  font-size: 1.5rem;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -376,14 +380,14 @@ p, a {
   line-height: 1.6;
   letter-spacing: 0.2px;
 }
-.BlogPost__Preamble + p {
+.BlogPost__Preamble p {
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
+  word-break: break-all;
 }
 
 .Single__BreadcrumbLink + a {
-  color: #000000;
   color: #000000;
 }
 
@@ -391,6 +395,162 @@ p, a {
   font-size: 2.2rem;
 }
 .Page__Breadcrumb a:not(:first-child) {
+  color: #000000;
+}
+
+.SinglePage__Content {
+  word-break: break-all;
+  color: green;
+}
+
+.wpf-action-link {
+  display: none;
+}
+
+.wpf-last-info {
+  display: none;
+}
+
+.wpforo-feed {
+  display: none;
+}
+
+#wpforo-footer {
+  margin-top: 3rem !important;
+}
+
+.wpf-item-element:nth-child(2) {
+  display: none !important;
+}
+
+.login {
+  position: relative;
+  background-image: url("images/login-bg.jpg") !important;
+  background-size: cover;
+  background-position: 60% 90%;
+}
+.login form {
+  border: none;
+}
+
+#backtoblog {
+  padding: 2rem 0 !important;
+  background-color: steelblue;
+  margin: 0;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+#login {
+  position: absolute;
+  top: -10rem;
+  right: 30rem;
+}
+#login #loginform {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  background-color: hotpink;
+  padding-bottom: 2.6rem;
+}
+#login #nav {
+  background-color: hotpink;
+  margin-top: 0;
+}
+#login h1 a {
+  background: none;
+  content: "hej";
+  border: 1px solid blue;
+}
+#login h1 a ::after {
+  border: 1px solid red;
+  width: 100%;
+  height: 100%;
+  content: "Ny text";
+}
+#login #user-login {
+  border-radius: 1rem;
+}
+
+.SingleEvent {
+  background: #FFFFFF;
+}
+.SingleEvent__BackgroundImage {
+  padding-top: 51.7rem;
+  position: relative;
+}
+.SingleEvent__BackgroundOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(to right, #FFFFFF, transparent);
+  background-image: radial-gradient(circle at left, #FFFFFF, #FFFFFF, rgba(255, 255, 255, 0.7), transparent);
+}
+.SingleEvent__Wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10rem 30rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.SingleEvent__Title,
+.SingleEvent h3 {
+  color: #FF8A00;
+}
+.SingleEvent p {
+  color: #5C5C5C;
+}
+.SingleEvent__Content {
+  max-width: 50rem;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  word-break: break-all;
+}
+.SingleEvent__BreadcrumbLink, .SingleEvent__BreadcrumbHomeLink {
+  font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  display: inline-block;
+}
+.SingleEvent__BreadcrumbHomeLink {
+  background: #212121;
+}
+.SingleEvent__BreadcrumbLink {
+  color: #212121;
+  position: relative;
+  margin-left: 0.3rem;
+}
+.SingleEvent__BreadcrumbLink::before {
+  content: ">";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+.SingleEvent__ChildrenAside * {
+  color: #212121;
+}
+.SingleEvent__ParentTitle {
+  background-color: #FF8A00;
+}
+.SingleEvent__ChildrenNavList {
+  list-style: none;
+  background-color: #FFF7DF;
+}
+
+.SingleEvent__BreadcrumbLink + a {
+  color: #000000;
+}
+
+.SingleEvent__Breadcrumb {
+  font-size: 2.2rem;
+}
+.SingleEvent__Breadcrumb a:not(:first-child) {
   color: #000000;
 }
 
@@ -461,7 +621,7 @@ body {
 }
 .FrontPage__BlogContentInner {
   height: 100%;
-  width: 60%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -493,8 +653,14 @@ body {
   color: #FF8A00;
 }
 .FrontPage__BlogText {
-  color: #000000;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
+  border: 1px solid red;
+  white-space: normal;
+  word-wrap: break-word;
+  font-size: 1.5rem;
+}
+.FrontPage__BlogText p {
+  color: #000000;
 }
