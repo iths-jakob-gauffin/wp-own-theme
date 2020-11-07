@@ -22,9 +22,15 @@
 
                                 <div class="Blog__BlogPostsWrapper">
                                     <?php 
+                                
 
                                         while(have_posts()){
                                             the_post();
+                                            $eventDate = new DateTime(get_field('event_date'));
+                                            // $image = get_post_field( 'event_image');
+                                            // echo var_dump($image);
+                                            $image = get_field('related_program');
+                                            print_r($image);
                                             ?>
                                                 <div class="Blog__BlogPostWrapper">
                                                     <article class="BlogPost">
@@ -37,7 +43,8 @@
                                                                 <div class="BlogPost__Text">
                                                                     <h3 class="BlogPost__Title"><?php the_title(); ?></h3>
                                                                     <div class="BlogPost__MetaBox">
-                                                                        <span class="BlogPost__Date"><?php the_time('j F, Y'); ?></span>
+                                                                        <span class="BlogPost__Date"><?php echo $eventDate->format('j F, Y') ?></span>
+                                                                        <!-- <span class="BlogPost__Date"><?php the_time('j F, Y'); ?></span> -->
                                                                         by <span class="BlogPost__Author"><?php the_author_posts_link(); ?></span>
                                                                         in <span class="BlogPost__Category"><?php echo get_the_category_list(', '); ?></span>
                                                                     </div>
@@ -58,6 +65,8 @@
                                 <?php 
                                     echo paginate_links();
                                 ?>
+
+                                <a href="<?php echo site_url('/past-events'); ?>" class="ButtonRound">See passed events</a>
                             <!-- </main> -->
                                 
                             <?php 

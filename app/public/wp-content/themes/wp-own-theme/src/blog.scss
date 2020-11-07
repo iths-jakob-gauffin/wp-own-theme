@@ -121,10 +121,14 @@
     }
 
     &__BlogPostWrapper {
-        padding: 6rem 0;
-        margin: 0 auto;
+        padding: 6rem 30rem;
+        margin: 0 -30rem;
         display: flex;
         justify-content: center;
+    }
+
+    &__BlogPostWrapper:nth-child(2n){
+        background-color: $orange;
     }
 
     .page-numbers {

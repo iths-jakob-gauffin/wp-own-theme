@@ -29,6 +29,23 @@
 
                                 <h2 class="SingleEvent__Title"><?php the_title() ?></h2>
                                 <div class="SingleEvent__Content"><?php the_content(); ?></div>
+
+                                    <?php 
+                                        $relatedPrograms = get_field('related_program');
+
+                                        if(isset($relatedPrograms)){
+                                            echo "<h4 style='color: black; font-size: 2rem'>Related Program(s)</h4>";
+                                            echo "<ul>";
+                                            foreach($relatedPrograms as $program){
+                                                ?>
+                                                <li><a href="<?php the_permalink( $program ); ?>"><?php echo $program->post_title; ?></a></li>
+                                            <?php
+                                            }
+                                            echo "</ul>";
+                                        }
+                                        
+
+                                    ?>
                             </main>
                                 
                             <?php 

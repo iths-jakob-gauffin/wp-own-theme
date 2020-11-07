@@ -15,6 +15,22 @@ function ownThemePostTypes(){
             ),
             'menu_icon' => 'dashicons-editor-quote'
         ) );
+
+        register_post_type( 'program', array(
+            'supports' => array('title', 'editor'),
+            'has_archive' => true,
+            // 'has_image' => true,
+            'rewrite' => array('slug' => 'programs'),
+            'public' => true,
+            'labels' => array(
+                'name' => 'Programs',
+                'add_new_item' => 'Add New Programt',
+                'edit_item' => 'Edit Program',
+                'all_items' => 'All Programs',
+                'singular_name' => 'Program'
+            ),
+            'menu_icon' => 'dashicons-awards'
+        ) );
         
     }
 //gör en custom post type

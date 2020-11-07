@@ -56,6 +56,24 @@
                                     echo $cssClass ?>"
                             >Contact Us</a>
                         </li>
+                        <li class="Header__ListItem">
+                            <a href="<?php echo site_url('/programs')?>" 
+                            class="<?php 
+                                    $cssClass = ($post->post_type === "program" ? 'Header__Link Header__Link--CurrentMenuItem' : 'Header__Link');
+                                    echo $cssClass ?>"
+                            >Programs</a>
+                        </li>
+                        <li class="Header__ListItem">
+                            <a href="<?php echo site_url('/events')?>" 
+                            class="<?php 
+                                    if($post->post_type === 'event' OR is_page('past-events')){
+                                        $cssClass = 'Header__Link Header__Link--CurrentMenuItem';
+                                    } else {
+                                        $cssClass = 'Header__Link';
+                                    }
+                                    echo $cssClass ?>"
+                            >Events</a>
+                        </li>
                     </ul>
                 </nav>
                 <div class="Header__ButtonRoundWrapper">

@@ -8,6 +8,7 @@
     justify-content: space-between;
     // padding: 0 10rem;
     color: $orange;
+    color: red;
     position: relative;
     overflow: hidden;
     margin: 0 auto;
@@ -29,7 +30,7 @@
         align-self: center;
         align-items: center;
         // border: 1px solid black;
-        width: 48.8rem;
+        width: 40%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -115,6 +116,7 @@
 
     &__ButtonRoundWrapper {
         display: flex;
+        margin:-10rem;
     }
 
     &__LoggedInText {

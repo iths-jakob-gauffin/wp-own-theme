@@ -120,3 +120,31 @@ $current_url = get_permalink( $obj_id );
         wp_enqueue_style( "style" );
     }
     add_action('login_enqueue_scripts', 'myLoginCss');
+
+    //ladda bara in de kommande eventsen i archive-event:
+    // sen har jag lagt till program också
+    function queryPostsGetter($query){
+        if(!is_admin() AND is_post_type_archive('program') AND $query->is_main_query()){
+            $query->set('posts_per_page', -1);
+            $query->set('orderby', 'title');
+            $query->set('order', 'ASC');
+        }
+
+        if(!is_admin() AND is_post_type_archive('event') AND $query->is_main_query()){
+            $today = date('Ymd');
+            $query->set('posts_per_page', -1);
+            $query->set('meta_key', 'event_date');
+            $query->set('orderby', 'meta_value_num');
+            $query->set('order', 'ASC');
+            $query->set('meta_query', array(
+                array(
+                    'key' => 'event_date',
+                    'compare' => '>=',
+                    'value' => $today,
+                    'type' => 'numeric'
+                )
+            ));
+        }
+    }
+
+    add_action('pre_get_posts', 'queryPostsGetter');

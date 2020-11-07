@@ -26,6 +26,7 @@ html {
   align-items: center;
   justify-content: space-between;
   color: #FF8A00;
+  color: red;
   position: relative;
   overflow: hidden;
   margin: 0 auto;
@@ -45,7 +46,7 @@ html {
   list-style: none;
   align-self: center;
   align-items: center;
-  width: 48.8rem;
+  width: 40%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -93,6 +94,7 @@ html {
 }
 .Header__ButtonRoundWrapper {
   display: flex;
+  margin: -10rem;
 }
 .Header__LoggedInText {
   font-size: 1.5rem;
@@ -294,10 +296,13 @@ p, a {
   flex-direction: column;
 }
 .Blog__BlogPostWrapper {
-  padding: 6rem 0;
-  margin: 0 auto;
+  padding: 6rem 30rem;
+  margin: 0 -30rem;
   display: flex;
   justify-content: center;
+}
+.Blog__BlogPostWrapper:nth-child(2n) {
+  background-color: #FF8A00;
 }
 .Blog .page-numbers {
   display: inline-flex;
