@@ -127,7 +127,7 @@
         justify-content: center;
     }
 
-    &__BlogPostWrapper:nth-child(2n){
+    &__BlogPostWrapper:nth-child(2n) {
         background-color: $orange;
     }
 
@@ -172,6 +172,12 @@
         // height: 55%;
         height: calc(425 / 783 * 100%);
         background-color: $cream;
+    }
+
+    &__Image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     &__Section {

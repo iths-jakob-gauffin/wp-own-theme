@@ -14,7 +14,12 @@
                             <main class="SingleEvent__Main">
 
                                 <h2 class="SingleEvent__Title"><?php the_title() ?></h2>
-                                <div class="SingleEvent__Content"><?php the_content(); ?></div>
+                                <div class="SingleProfessor__ContentWrapper">
+                                    <div class="SingleProfessor__ImageWrapper">
+                                        <img src="<?php the_post_thumbnail_url(); ?>" alt="">
+                                    </div>
+                                    <div class="SingleEvent__Content"><?php the_content(); ?></div>
+                                </div>
 
                                     <?php 
                                         $relatedPrograms = get_field('related_program');

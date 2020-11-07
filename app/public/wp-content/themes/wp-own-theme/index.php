@@ -42,7 +42,7 @@
                                                 <div class="Blog__BlogPostWrapper">
                                                     <article class="BlogPost">
                                                         <figure class="BlogPost__Figure">
-                                                            <img src="" alt="" class="BlogPost__Image">
+                                                            <img src="<?php the_post_thumbnail_url(); ?>" alt="" class="BlogPost__Image">
                                                             <figcaption class="BlogPost__FigCaption"></figcaption>
                                                         </figure>
                                                         <section class="BlogPost__Section">
@@ -78,6 +78,7 @@
                             $testArray = get_pages(array(
                                 'child_of' => get_the_ID()
                             ));
+                            
 
                             //villkoret blir false om currentsidan sidan inte är en parent, samt om testarray blir null
                             if($parent or $testArray) { ?>

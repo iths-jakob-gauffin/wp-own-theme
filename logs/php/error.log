@@ -339,3 +339,39 @@ Stack trace:
 [07-Nov-2020 14:08:13 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\single-program.php on line 54
 [07-Nov-2020 14:08:49 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\single-program.php on line 56
 [07-Nov-2020 14:09:53 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\single-program.php on line 124
+[07-Nov-2020 22:04:49 UTC] PHP Fatal error:  Uncaught Exception: DateTime::__construct(): Failed to parse time string (26/11/2020) at position 0 (2): Unexpected character in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\front-page.php:45
+Stack trace:
+#0 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\front-page.php(45): DateTime->__construct('26/11/2020')
+#1 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Jakob\\...')
+#2 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Jakob\\...')
+#3 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\index.php(17): require('C:\\Users\\Jakob\\...')
+#4 {main}
+  thrown in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\front-page.php on line 45
+[07-Nov-2020 22:26:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function post_thumbnail() in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\single-professor.php:17
+Stack trace:
+#0 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Jakob\\...')
+#2 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\index.php(17): require('C:\\Users\\Jakob\\...')
+#3 {main}
+  thrown in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\single-professor.php on line 17
+[07-Nov-2020 22:26:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function post_thumbnail() in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\single-professor.php:17
+Stack trace:
+#0 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Jakob\\...')
+#2 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\index.php(17): require('C:\\Users\\Jakob\\...')
+#3 {main}
+  thrown in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\single-professor.php on line 17
+[07-Nov-2020 22:26:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function post_thumbnail() in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\single-professor.php:17
+Stack trace:
+#0 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Jakob\\...')
+#2 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\index.php(17): require('C:\\Users\\Jakob\\...')
+#3 {main}
+  thrown in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\single-professor.php on line 17
+[07-Nov-2020 22:27:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function thumbnail() in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\single-professor.php:17
+Stack trace:
+#0 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Jakob\\...')
+#2 C:\Users\Jakob\Local Sites\egetthemeforum\app\public\index.php(17): require('C:\\Users\\Jakob\\...')
+#3 {main}
+  thrown in C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\single-professor.php on line 17

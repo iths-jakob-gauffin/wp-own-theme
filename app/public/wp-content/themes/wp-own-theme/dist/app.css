@@ -339,6 +339,12 @@ p, a {
   height: calc(425 / 783 * 100%);
   background-color: #FFF7DF;
 }
+.BlogPost__Image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .BlogPost__Section {
   background: linear-gradient(to right top, #0085FF, #00D1FF);
   height: calc(358 / 783 * 100%);
@@ -557,6 +563,23 @@ p, a {
 }
 .SingleEvent__Breadcrumb a:not(:first-child) {
   color: #000000;
+}
+
+.SingleProfessor__ContentWrapper {
+  display: flex;
+}
+.SingleProfessor__ImageWrapper {
+  width: 30rem;
+  height: 30rem;
+  margin-right: 2rem;
+}
+.SingleProfessor__ImageWrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
 }
 
 body {
