@@ -63,10 +63,11 @@ $current_url = get_permalink( $obj_id );
         register_nav_menu( 'footerMenuLocation1', 'Footer Menu Location 1' );
         register_nav_menu( 'footerMenuLocation2', 'Footer Menu Location 2' );
         register_nav_menu( 'footerMenuLocation3', 'Footer Menu Location 3' );
-        add_theme_support( 'title_tag');
+        add_theme_support( 'title-tag');
+        add_theme_support('post-thumbnails');
     }
 
-    //Denna uppdaterar titel-taggen för varje sida du är på. Kan vara bra, v nr 13. ÄVEN HÄR SLÄNGER VI IN MENYN
+    //Denna uppdaterar titel-taggen för varje sida du är på. Kan vara bra, v nr 13. ÄVEN HÄR SLÄNGER VI IN MENYN, sen lägger vi även in stöd för bilder
     add_action('after_setup_theme', 'ownThemeFeatures');
 
     // DETTA ÄR FLYTTAT TILL MU-PLUGINS, SÅ ATT CUSTOM POST TYPES HÄNGER MED I ALLA THEMES

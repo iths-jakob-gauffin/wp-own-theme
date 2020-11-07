@@ -19,18 +19,31 @@ function ownThemePostTypes(){
         register_post_type( 'program', array(
             'supports' => array('title', 'editor'),
             'has_archive' => true,
-            // 'has_image' => true,
             'rewrite' => array('slug' => 'programs'),
             'public' => true,
             'labels' => array(
                 'name' => 'Programs',
-                'add_new_item' => 'Add New Programt',
+                'add_new_item' => 'Add New Program',
                 'edit_item' => 'Edit Program',
                 'all_items' => 'All Programs',
                 'singular_name' => 'Program'
             ),
             'menu_icon' => 'dashicons-awards'
         ) );
+
+        register_post_type( 'professor', array(
+            'supports' => array('title', 'editor', 'thumbnail'),
+            'public' => true,
+            'labels' => array(
+                'name' => 'Professors',
+                'add_new_item' => 'Add New Professor',
+                'edit_item' => 'Edit Professor',
+                'all_items' => 'All Professors',
+                'singular_name' => 'Professor'
+            ),
+            'menu_icon' => 'dashicons-coffee'
+        ) );
+        
         
     }
 //gör en custom post type

@@ -31,6 +31,39 @@
                                 <div class="SingleEvent__Content"><?php the_content(); ?></div>
                                
                                 <?php 
+                                  $relatedProfessors = new WP_Query(array(
+                                    'post_type' => 'professor',
+                                    'orderby' => 'title',
+                                    'order' => 'ASC',
+                                    'meta_query' => array(
+                                      array(
+                                        'key' => 'related_program',
+                                        'compare' => 'LIKE',
+                                        'value' => '"' . get_the_ID() . '"'
+                                      )
+                                    )
+                                  ));
+
+                                  // echo var_dump($relatedEvents);
+
+                                  if($relatedProfessors->have_posts()){
+                                    echo "<h4 style='color: black; font-size: 2rem'>" . get_the_title() . " Professors:</h4>";
+                                    while($relatedProfessors->have_posts()){
+                                      $relatedProfessors->the_post();
+                                      ?>
+                                        <li>
+                                          <a style="font-size: 2.3rem" href="<?php the_permalink(); ?>">
+                                            <?php 
+                                              the_title();
+                                            ?>
+                                          <a>
+                                        </li>
+                                      <?php
+                                    } 
+                                  }
+
+                                  wp_reset_postdata();
+
                                   $relatedEvents = new WP_Query(array(
                                     'post_type' => 'event',
                                     'meta_key' => 'event_date',
