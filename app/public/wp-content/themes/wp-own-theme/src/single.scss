@@ -20,3 +20,20 @@
     // }
     color: green;
 }
+
+.Single{
+    margin-bottom: 10rem;
+    
+    &__Content{
+        background-color: $white;
+        color: $black;
+        width: 100%;
+        min-width: 20rem;
+        max-width: 65rem;
+        word-break: break-all;
+        margin-top: -7rem;
+        margin-bottom: 3rem;
+        line-height: 1.6;
+        background: none;
+    }
+}

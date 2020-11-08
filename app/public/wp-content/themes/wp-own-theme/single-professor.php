@@ -4,19 +4,49 @@
 
     while(have_posts()){
         the_post(); ?>
-            <div class="SingleEvent">
+            <main class="Single">
 
-                <div class="SingleEvent__BackgroundImage" style="background-image: url(<?php echo get_theme_file_uri( '/images/guychickdog.webp' )?>); background-position: 50% 25%; background-size: cover;">
+                <?php 
+                    pageBanner(array(
+                        'wpPage' => 'This is from single-professor.php'
+                    ));
+                    ?>
 
-                    <div class="SingleEvent__BackgroundOverlay"></div>
-                    
-                        <div class="SingleEvent__Wrapper">
+                    <div class="container--main">
+                        <div class="SingleProfessor__ContentWrapper">
+                            <div class="SingleProfessor__ImageWrapper">
+                                <img src="<?php the_post_thumbnail_url('professorPortrait'); ?>" alt="">
+                            </div>
+                            <section class="Single__Content">
+                                <?php echo "<p>" . get_the_content() . "</p>";  ?>
+                            </section>
+                            
+                        </div>
+
+                        <?php 
+                            $relatedPrograms = get_field('related_program');
+
+                            if(isset($relatedPrograms)){
+                                echo "<h4 style='color: black; font-size: 2rem'>Subject(s) taught</h4>";
+                                echo "<ul>";
+                                foreach($relatedPrograms as $program){
+                                    ?>
+                                    <li style="margin-top: 1rem"><a href="<?php the_permalink( $program ); ?>"><?php echo $program->post_title; ?></a></li>
+                                <?php
+                                }
+                                echo "</ul>";
+                            }
+                        ?>
+
+                    </div>
+
+                        <!-- <div class="SingleEvent__Wrapper">
                             <main class="SingleEvent__Main">
 
                                 <h2 class="SingleEvent__Title"><?php the_title() ?></h2>
                                 <div class="SingleProfessor__ContentWrapper">
                                     <div class="SingleProfessor__ImageWrapper">
-                                        <img src="<?php the_post_thumbnail_url(); ?>" alt="">
+                                        <img src="<?php the_post_thumbnail_url('professorPortrait'); ?>" alt="">
                                     </div>
                                     <div class="SingleEvent__Content"><?php the_content(); ?></div>
                                 </div>
@@ -70,9 +100,8 @@
                                     </nav>
                                 </aside>
                             <?php } ?>
-                        </div>
-                    </div>
-            </div>
+                        </div> -->
+            </main>
         <?php
     }
 

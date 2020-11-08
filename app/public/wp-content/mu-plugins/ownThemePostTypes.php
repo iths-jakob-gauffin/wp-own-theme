@@ -2,7 +2,7 @@
 
 function ownThemePostTypes(){
         register_post_type( 'event', array(
-            'supports' => array('title', 'editor', 'excerpt'),
+            'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
             'has_archive' => true,
             'rewrite' => array('slug' => 'events'),
             'public' => true,

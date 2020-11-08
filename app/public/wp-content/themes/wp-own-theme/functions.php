@@ -4,37 +4,17 @@
         wp_enqueue_style("google_fonts_roboto", "//fonts.googleapis.com/css2?family=Roboto&display=swap");
         //den här null och microtime gör så att stylesheeten inte cachas. Så slipper du köra disable cache i browsern.
         wp_enqueue_style("eget_tema_main_styles", get_stylesheet_uri(), NULL, microtime());
-        // $url = get_site_url();
-        // echo $url;
-        // global $wp;
-        // $url = home_url( $wp->request );
-        // echo $url;
-//         global $wp;
-// echo add_query_arg( $wp->query_vars, home_url() );
-
     global $post;
     $post_name = $post->post_name;
     $post_title = $post->post_title;
-    // echo var_dump($post);
-    // $url = get_site_url();
-    // echo $url;
-    // echo var_dump($post);
-    // echo strtolower($post_title);
-
+    
     $obj_id = get_queried_object_id();
-$current_url = get_permalink( $obj_id );
-    // echo $current_url;
+    $current_url = get_permalink( $obj_id );
     $fullSlug = "/" . $post_name . "/" . strtolower($post_title);
-    // echo $fullSlug;
     $slug = get_post_field( 'post_name', get_post() );
     $url = home_url( add_query_arg( null, null ));
-    // echo $slug;
-    // echo get_the_permalink();
 
         if($url === 'http://egetthemeforum.local/community/' OR $url === 'http://egetthemeforum.local/community/forum/' ){
-        // if($fullSlug === '/community/forum' OR $slug === 'community'){
-            
-            // echo "SANT";
             wp_register_style("extra_styles", get_template_directory_uri() . '/dist/extraStyles.css', [], 1, "all");
             wp_enqueue_style("extra_styles");
         } else{
@@ -65,6 +45,11 @@ $current_url = get_permalink( $obj_id );
         register_nav_menu( 'footerMenuLocation3', 'Footer Menu Location 3' );
         add_theme_support( 'title-tag');
         add_theme_support('post-thumbnails');
+        // denna gör en custom resize av bilderna som importeras, sen tar vi true för att croppa bilden
+        add_image_size('professorLandscape', 250, 200, true);
+        add_image_size('professorPortrait', 250, 300, true);
+        add_image_size('bannerImage', 1903, 357, true);
+
     }
 
     //Denna uppdaterar titel-taggen för varje sida du är på. Kan vara bra, v nr 13. ÄVEN HÄR SLÄNGER VI IN MENYN, sen lägger vi även in stöd för bilder
@@ -149,3 +134,40 @@ $current_url = get_permalink( $obj_id );
     }
 
     add_action('pre_get_posts', 'queryPostsGetter');
+
+    //v 42 gör en komponent av pageBanner
+    function pageBanner($args = NULL){
+        if(!$args['title']){
+            $args['title'] = get_the_title();
+        }
+
+        if(!$args['subtitle']){
+            if(get_field('banner_subtitle')){
+                $args['subtitle'] = get_field('banner_subtitle');
+            } else {
+                $args['subtitle'] = "There is no subtitle";
+            }
+        }
+
+        if(!$args['photo']){
+            if(get_field('banner_image')){
+                $args['photo'] = get_field('banner_image')['sizes']['bannerImage'];
+            } else {
+                $args['photo'] = get_theme_file_uri('dist/images/palmtreelowres.jpg');
+            }
+        }
+
+        if(!$args['wpPage']){
+            $args['wpPage'] = 'This page is not yet identified';
+        }
+
+        ?>
+            <div class="PageBanner__BackgroundImage" style="background-image: url(<?php echo $args['photo']; ?>);">
+                <section class="container--main">
+                    <h1 class="PageBanner__Title"><?php echo $args['title']; ?></h1>
+                    <h2 class="PageBanner__Subtitle"><?php echo $args['subtitle']; ?></h2>
+                    <h3 class="PageBanner__WpPage"><?php echo $args['wpPage']; ?></h3>
+                </section>
+            </div>
+        <?php
+    }

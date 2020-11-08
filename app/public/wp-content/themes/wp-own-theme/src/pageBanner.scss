@@ -1,0 +1,46 @@
+@import "./variables.scss";
+
+.PageBanner{
+
+  &__BackgroundImage {
+    height: 35.7rem;
+    position: relative;
+    z-index: -1;
+    padding: 10rem 0; 
+    background-size: cover;
+
+    &::after{
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: radial-gradient(
+          circle at left,
+          $white,
+          $white,
+          rgba(255, 255, 255, 0.7),
+          transparent
+      );
+    }
+  }
+
+  &__Title{
+    color: $orange;
+    margin-bottom: 2rem;
+    font-size: 5rem;
+  }
+  
+  &__Subtitle, &_WpPage{
+    color: $grayDark;
+    margin-bottom: 2rem;
+  }
+  
+  &__WpPage{
+    margin-bottom: 3rem;
+    font-size: 2rem;
+  }
+}
+

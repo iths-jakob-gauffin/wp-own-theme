@@ -115,8 +115,8 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\src\app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Jakob\Local Sites\egetthemeforum\app\public\wp-content\themes\wp-own-theme\src\app.scss */"./src/app.scss");
+__webpack_require__(/*! C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\src\app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! C:\Users\jakob\Local Sites\egettheme\app\public\wp-content\themes\wp-own-theme\src\app.scss */"./src/app.scss");
 
 
 /***/ })

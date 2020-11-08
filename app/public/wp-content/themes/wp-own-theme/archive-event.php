@@ -29,14 +29,16 @@
                                             $eventDate = new DateTime(get_field('event_date'));
                                             // $image = get_post_field( 'event_image');
                                             // echo var_dump($image);
-                                            $image = get_field('related_program');
-                                            print_r($image);
                                             ?>
                                                 <div class="Blog__BlogPostWrapper">
                                                     <article class="BlogPost">
                                                         <figure class="BlogPost__Figure">
-                                                            <img src="" alt="" class="BlogPost__Image">
-                                                            <figcaption class="BlogPost__FigCaption"></figcaption>
+                                                        <?php if(has_post_thumbnail()){
+                                                            ?>
+                                                                <img src="<?php the_post_thumbnail_url(); ?>" alt="" class="BlogPost__Image">
+                                                                <figcaption class="BlogPost__FigCaption"></figcaption>
+                                                            <?php
+                                                        } ?> 
                                                         </figure>
                                                         <section class="BlogPost__Section">
                                                             <div class="BlogPost__Content">

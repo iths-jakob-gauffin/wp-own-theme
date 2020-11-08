@@ -11,9 +11,11 @@
 @import "./login.scss";
 @import "./singleEvent.scss";
 @import "./singleProfessor.scss";
+@import "./singleProgram.scss";
+@import "./pageBanner.scss";
 
 body {
-    background-color: steelblue;
+    background-color: $white;
 
     // h1, h2{
     //     color: $white;
