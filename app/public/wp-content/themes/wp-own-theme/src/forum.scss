@@ -25,3 +25,21 @@
 .wpf-item-element:nth-child(2) {
     display: none !important;
 }
+//////////////////////// try to recreate design
+
+#wpforo-menu{
+    position: relative;
+    &::before{
+        content: "";
+        background: url('./images/musikfolk-logo.svg');
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: contain;
+        // position: absolute;
+        width: 285px;
+        height: 115px;
+        // background-color: green;
+        // top: 0;
+        // left: 0;
+    }
+}

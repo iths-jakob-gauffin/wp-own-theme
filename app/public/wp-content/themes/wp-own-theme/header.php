@@ -86,7 +86,7 @@
                         <?php
                     } else { ?>
                         <a href="<?php echo wp_registration_url(); ?>" class="ButtonRound">Sign up</a>
-                        <a href="<?php echo wp_login_url(); ?>" class="ButtonRound">Log in</a>
+                        <a href="<?php echo var_dump(wp_login_url()); echo wp_login_url(); ?>" class="ButtonRound">Log in</a>
                         <?php
                     }
                     ?>
